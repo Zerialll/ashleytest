@@ -14,7 +14,7 @@ RUN npm install -g grunt-bower-task
 
 COPY . /app
 WORKDIR /app
-RUN ["kpm","restore"]
+RUN ["nuget","restore"]
 
 EXPOSE 5004
 ENTRYPOINT ["k","kestrel"]
