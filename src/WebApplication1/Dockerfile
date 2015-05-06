@@ -14,7 +14,7 @@ RUN npm install -g grunt-bower-task
 
 COPY . /app
 WORKDIR /app
-RUN ["nuget","restore"]
+RUN ["dnu","restore"]
 
 EXPOSE 5004
-ENTRYPOINT ["k","kestrel"]
+ENTRYPOINT ["dnx","project.json","kestrel"]
